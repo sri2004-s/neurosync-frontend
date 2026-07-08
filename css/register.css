@@ -1,0 +1,479 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background:linear-gradient(135deg,#4f46e5,#2563eb,#06b6d4);
+
+    background-size:300% 300%;
+
+    animation:bg 12s ease infinite;
+
+}
+
+/* ===========================
+Animated Background
+=========================== */
+
+@keyframes bg{
+
+0%{background-position:0% 50%;}
+
+50%{background-position:100% 50%;}
+
+100%{background-position:0% 50%;}
+
+}
+
+.background{
+
+position:absolute;
+
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-1;
+
+}
+
+.background span{
+
+position:absolute;
+
+display:block;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.12);
+
+animation:float 10s infinite ease-in-out;
+
+}
+
+.background span:nth-child(1){
+
+width:180px;
+height:180px;
+
+left:5%;
+top:10%;
+
+}
+
+.background span:nth-child(2){
+
+width:260px;
+height:260px;
+
+right:5%;
+bottom:5%;
+
+}
+
+.background span:nth-child(3){
+
+width:120px;
+height:120px;
+
+left:70%;
+top:15%;
+
+}
+
+.background span:nth-child(4){
+
+width:150px;
+height:150px;
+
+left:45%;
+bottom:8%;
+
+}
+
+@keyframes float{
+
+50%{
+
+transform:translateY(-25px);
+
+}
+
+}
+
+/* ===========================
+Container
+=========================== */
+
+.container{
+
+width:1100px;
+
+height:680px;
+
+display:flex;
+
+border-radius:25px;
+
+overflow:hidden;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(20px);
+
+box-shadow:0 25px 60px rgba(0,0,0,.30);
+
+}
+
+/* ===========================
+Left
+=========================== */
+
+.left-panel{
+
+flex:1;
+
+padding:60px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+color:white;
+
+}
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+margin-bottom:35px;
+
+}
+
+.logo i{
+
+font-size:45px;
+
+}
+
+.logo h1{
+
+font-size:45px;
+
+}
+
+.left-panel h2{
+
+font-size:30px;
+
+margin-bottom:20px;
+
+}
+
+.left-panel p{
+
+line-height:1.8;
+
+font-size:17px;
+
+margin-bottom:35px;
+
+}
+
+.features{
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+.feature{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+.feature i{
+
+width:45px;
+height:45px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.18);
+
+}
+
+/* ===========================
+Right
+=========================== */
+
+.right-panel{
+
+width:430px;
+
+background:white;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:40px;
+
+}
+
+form{
+
+width:100%;
+
+}
+
+form h2{
+
+text-align:center;
+
+font-size:30px;
+
+color:#2563eb;
+
+margin-bottom:10px;
+
+}
+
+.subtitle{
+
+text-align:center;
+
+margin-bottom:30px;
+
+color:#666;
+
+}
+
+/* ===========================
+Inputs
+=========================== */
+
+.input-group,
+.select-group{
+
+display:flex;
+
+align-items:center;
+
+background:#f3f4f6;
+
+padding:15px;
+
+border-radius:12px;
+
+margin-bottom:20px;
+
+transition:.3s;
+
+}
+
+.input-group:hover,
+.select-group:hover{
+
+box-shadow:0 8px 20px rgba(37,99,235,.18);
+
+}
+
+.input-group i,
+.select-group i{
+
+margin-right:15px;
+
+color:#2563eb;
+
+font-size:18px;
+
+}
+
+.input-group input{
+
+width:100%;
+
+border:none;
+
+outline:none;
+
+background:none;
+
+font-size:16px;
+
+}
+
+.select-group select{
+
+width:100%;
+
+border:none;
+
+outline:none;
+
+background:none;
+
+font-size:16px;
+
+cursor:pointer;
+
+}
+
+/* ===========================
+Button
+=========================== */
+
+button{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:50px;
+
+background:linear-gradient(90deg,#2563eb,#7c3aed);
+
+color:white;
+
+font-size:17px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 15px 25px rgba(37,99,235,.35);
+
+}
+
+/* ===========================
+Login Link
+=========================== */
+
+.login-link{
+
+text-align:center;
+
+margin-top:25px;
+
+}
+
+.login-link a{
+
+text-decoration:none;
+
+font-weight:600;
+
+color:#2563eb;
+
+}
+
+.login-link a:hover{
+
+text-decoration:underline;
+
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:1000px){
+
+.container{
+
+width:95%;
+
+height:auto;
+
+flex-direction:column;
+
+}
+
+.left-panel{
+
+padding:40px;
+
+text-align:center;
+
+}
+
+.right-panel{
+
+width:100%;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.logo h1{
+
+font-size:35px;
+
+}
+
+.left-panel h2{
+
+font-size:24px;
+
+}
+
+.left-panel p{
+
+font-size:15px;
+
+}
+
+}
